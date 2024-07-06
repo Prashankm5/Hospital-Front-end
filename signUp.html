@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SignUp</title>
+
+    <style>
+        body {
+            background-color: #e9ecef;
+        }
+        .registration-form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 0px #000;
+            margin-top: 30px;
+            max-width: 600px;
+            margin: auto;
+            
+            margin-top: 40px;
+        }
+        .registration-form h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .form-group label {
+            color: #495057;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .form-control:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Hospital Logo</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="dashboard.html">Dashboard</a>
+              <a class="nav-item nav-link" href="profile.html">Profile</a>
+              <a class="nav-item nav-link" href="blog.html">Blog</a>
+              <a class="nav-item nav-link" href="signUp.html">Sign Up</a>
+              <a class="nav-item nav-link" href="login.html">Login</a>
+              <a class="nav-item nav-link" href="#">logout</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    
+      
+
+
+<div class="container">
+    <div class="registration-form">
+        <h2 class="text-center">Registration</h2>
+        <form>
+            <div class="form-group">
+                <label for="photo">Photo</label>
+                <input type="file" class="form-control-file" id="photo" required>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+            </div>
+            <!-- <div class="form-group">
+                <label for="specialty">Specialty</label>
+                <input type="text" class="form-control" id="specialty" placeholder="Specialty" required>
+            </div> -->
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" rows="2" placeholder="Address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+      <script src="blog/js/bootstrap.js"></script>
+      <script src="blog/js/jQuery.js"></script>
+      <script src="blog/js/popper.js"></script>
+  </body>
+  </html>
