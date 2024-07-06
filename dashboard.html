@@ -34,6 +34,28 @@
         .card-body {
             padding-top: 10px;
         }
+        .ranking-circle {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: auto;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .ranking-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .ranking-label {
+            font-size: 16px;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
@@ -53,7 +75,7 @@
               <a class="nav-item nav-link" href="blog.html">Blog</a>
               <a class="nav-item nav-link" href="signUp.html">Sign Up</a>
               <a class="nav-item nav-link" href="login.html">Login</a>
-              <a class="nav-item nav-link" href="#">logout</a>
+              <a class="nav-item nav-link" href="logout.html">logout</a>
             </div>
           </div>
         </nav>
@@ -73,13 +95,55 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-8">
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Hospital AIR Ranking
+                </div>
+                <div class="card-body text-center">
+                    <div class="ranking-circle">
+                        <div class="ranking-number">1</div>
+                        <div class="ranking-label">Hospital A</div>
+                        <div class="ranking-label">AIR Score: 85</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Doctor's World Ranking
+                </div>
+                <div class="card-body text-center">
+                    <div class="ranking-circle">
+                        <div class="ranking-number">10</div>
+                        <div class="ranking-label">Doctor A</div>
+                        <div class="ranking-label">World Rank: 10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        
+        <div class="col-lg-6">
             <div class="card">
                 <div class="card-header">
                     Revenue Overview
                 </div>
                 <div class="card-body">
                     <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">         
+            <div class="card">
+                <div class="card-header">
+                    Doctors Quality and Ranking
+                </div>
+                <div class="card-body">
+                    <canvas id="doctorsQualityChart"></canvas>
                 </div>
             </div>
         </div>
@@ -111,6 +175,41 @@
             }
         }
     });
+
+// Doctors Quality Chart
+var ctx2 = document.getElementById('doctorsQualityChart').getContext('2d');
+var doctorsQualityChart = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ['Doctor A', 'Doctor B', 'Doctor C', 'Doctor D', 'Doctor E'],
+        datasets: [{
+            label: 'Quality Score',
+            data: [85, 79, 76, 82, 88],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
 </script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

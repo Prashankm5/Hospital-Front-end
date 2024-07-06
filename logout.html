@@ -7,12 +7,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #e9ecef;
         }
         .logout-card {
             background: #ffffff;
@@ -22,6 +17,8 @@
             text-align: center;
             max-width: 400px;
             width: 100%;
+            margin: auto;
+            margin-top: 40px;
         }
         .logout-card h2 {
             color: #007bff;
@@ -34,11 +31,33 @@
 </head>
 <body>
 
-<div class="logout-card">
-    <h2>Logout Confirmation</h2>
-    <p>Are you sure you want to logout?</p>
-    <button class="btn btn-primary logout-button" onclick="logout()">Logout</button>
-</div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Hospital Logo</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="dashboard.html">Dashboard</a>
+              <a class="nav-item nav-link" href="profile.html">Profile</a>
+              <a class="nav-item nav-link" href="blog.html">Blog</a>
+              <a class="nav-item nav-link" href="signUp.html">Sign Up</a>
+              <a class="nav-item nav-link" href="login.html">Login</a>
+              <a class="nav-item nav-link" href="logout.html">logout</a>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="logout-card">
+            <h2>Logout Confirmation</h2>
+            <p>Are you sure you want to logout?</p>
+            <button class="btn btn-primary logout-button" onclick="logout()">Logout</button>
+        </div>
+    </div>
 
 <script>
     function logout() {
